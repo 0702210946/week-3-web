@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemedicine Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  /* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout */
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-bar li {
+  margin: 0 1rem;
+}
+
+.nav-bar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.content {
+  flex: 3;
+  padding: 1rem;
+}
+
+.sidebar {
+  flex: 1;
+  padding: 1rem;
+  background: #f4f4f4;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-bar ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .nav-bar.active ul {
+      display: flex;
+  }
+
+  .hamburger-menu {
+      display: block;
+  }
+
+  main {
+      flex-direction: column;
+  }
+
+  .content {
+      order: 2;
+  }
+
+  .sidebar {
+      order: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+      font-size: 1.2rem;
+  }
+
+  .hamburger-menu {
+      font-size: 1.2rem;
+  }
+}
+
+</style>
+<body>
+    <header>
+        <div class="logo">Telemed App</div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger-menu" aria-label="Toggle navigation">☰</button>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <h1>Welcome to Telemedicine</h1>
+            <p>Here you can find all about our telemedicine services.</p>
+            <!-- Main content goes here -->
+        </section>
+        <aside class="sidebar">
+            <h2>our services</h2>
+            <ul>
+                <li><a href="#link1">inpatient</a></li>
+                <li><a href="#link2">outpatient</a></li>
+                <li><a href="#link3">surgery</a></li>
+                <li><a href="#link4">home treatment</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2024 Telemedicine Application</p>
+        <p>Follow us on <a href="#">Social Media</a></p>
+        <p>Contact us at <a href="mailto:info@telemedapp.com">info@telemedapp.com</a></p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
